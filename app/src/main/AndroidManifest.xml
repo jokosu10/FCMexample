@@ -18,7 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".FirebaseService"/>
+        <service android:name=".FirebaseService">
+            <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+        </service>
+        <service android:name=".RecevieMessage">
+            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+        </service>
     </application>
 
 </manifest>
